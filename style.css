@@ -1,3 +1,19 @@
-body{
-    background-color:#a3e1e0
+body {
+    background-image: url('website_background.jpg'); /* Adjust path if needed */
+    background-size: cover;          /* Ensures image covers the entire background */
+    background-repeat: no-repeat;    /* Prevents image from tiling */
+    background-attachment: fixed;    /* Keeps image fixed when scrolling */
+    background-position: center center; /* Centers the image */
+
+    /* Optional: Fallback color and text color for readability */
+    background-color: #f0f0f0; /* Light fallback background */
+    color: #333; /* Dark text color if needed */
+}
+
+/* Consider making your content areas slightly transparent or giving them a background
+   to ensure text readability over the image. For example: */
+.container { /* Replace .container with the actual class/ID of your main content div */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 8px;
 }
