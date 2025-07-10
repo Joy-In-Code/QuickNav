@@ -27,12 +27,7 @@ h1 {
     letter-spacing: 2px; /* Spread letters slightly for a modern look */
     margin-bottom: 30px; /* More space below the main heading */
     text-transform: uppercase; /* Optional: Make it all caps */
-    /* Add a subtle glass effect to the heading itself */
-    background: rgba(255, 255, 255, 0.05); /* Very light, barely visible background */
-    backdrop-filter: blur(2px); /* Slight blur behind the text */
-    -webkit-backdrop-filter: blur(2px);
-    padding: 10px 20px;
-    border-radius: 8px;
+   
 }
 
 /* Corrected and Consolidated Styles for H2 */
