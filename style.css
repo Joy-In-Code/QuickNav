@@ -1,19 +1,98 @@
 body {
-    background-image: url('website_background.jpg'); /* Adjust path if needed */
-    background-size: cover;          /* Ensures image covers the entire background */
-    background-repeat: no-repeat;    /* Prevents image from tiling */
-    background-attachment: fixed;    /* Keeps image fixed when scrolling */
-    background-position: center center; /* Centers the image */
+    background-image: url('website_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #f0f0f0; /* Fallback color */
+    color: #333; /* Default text color, will override for buttons */
+    font-family: Arial, sans-serif; /* A more modern font for readability */
 
-    /* Optional: Fallback color and text color for readability */
-    background-color: #f0f0f0; /* Light fallback background */
-    color: #333; /* Dark text color if needed */
+    /* To center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: flex-start; /* Aligns content to the top */
+    min-height: 100vh; /* Ensures body takes full viewport height */
+    padding-top: 50px; /* Add some top padding */
+}
+/* New Styles for H1 */
+h1 {
+    font-family: 'Montserrat', sans-serif; /* Or 'Poppins', sans-serif; */
+    font-size: 3.5em; /* Adjusted size: larger and more prominent */
+    color: #ffffff; /* White color for contrast */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), /* Subtle glow */
+                 0 0 25px rgba(255, 255, 255, 0.2); /* More subtle glow */
+    letter-spacing: 2px; /* Spread letters slightly for a modern look */
+    margin-bottom: 30px; /* More space below the main heading */
+    text-transform: uppercase; /* Optional: Make it all caps */
+    /* Add a subtle glass effect to the heading itself */
+    background: rgba(255, 255, 255, 0.05); /* Very light, barely visible background */
+    backdrop-filter: blur(2px); /* Slight blur behind the text */
+    -webkit-backdrop-filter: blur(2px);
+    padding: 10px 20px;
+    border-radius: 8px;
 }
 
-/* Consider making your content areas slightly transparent or giving them a background
-   to ensure text readability over the image. For example: */
-.container { /* Replace .container with the actual class/ID of your main content div */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    padding: 20px;
-    border-radius: 8px;
+/* Styles for H2 */
+h2 {
+    font-family: 'Poppins', sans-serif; /* Consistent with body or choose another */
+    font-size: 2em; /* Adjust size for subheadings */
+    color: #e0e0e0; /* Slightly off-white for hierarchy */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Clearer shadow for readability */
+    margin-top: 40px; /* Space above secondary headings */
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Styles for your new glassmorphism buttons */
+.glass-button {
+    display: inline-block; /* Allows padding, margin, width/height */
+    padding: 12px 25px; /* Slightly more padding for a better button feel */
+    margin: 10px 0; /* Space between buttons (top/bottom) */
+    text-decoration: none; /* Removes underline from links */
+    color: #ffffff; /* White text color for readability against dark background */
+    font-size: 1.2em; /* Slightly larger text */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center the text */
+    cursor: pointer; /* Indicates it's clickable */
+
+    /* Glassmorphism properties - MAIN CHANGE IS HERE */
+    background-color: rgba(0, 0, 0, 0.4); /* CHANGED: Darker, less transparent background */
+    /* Previous was rgba(255, 255, 255, 0.1) - now using a dark semi-transparent color */
+
+    backdrop-filter: blur(8px); /* INCREASED BLUR */
+    -webkit-backdrop-filter: blur(8px); /* For Safari support */
+    border-radius: 12px; /* Slightly more rounded corners */
+
+    /* Enhanced border/shadow for realism - COMBINE MULTIPLE SHADOWS */
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.4), /* Outer shadow for more depth, slightly darker */
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05), /* Very subtle light inner border */
+        inset 0 0 0 2px rgba(0, 0, 0, 0.2); /* DARKER INNER SHADOW FOR EDGES, increased opacity */
+    /* You can play with the last shadow's offset and blur for edge definition */
+
+
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.glass-button:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* CHANGED: Even darker on hover */
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.5), /* More pronounced outer shadow on hover */
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 0 0 2px rgba(0, 0, 0, 0.3); /* Slightly darker inner shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Basic styling for your headings for better visibility */
+h1, h2 {
+    color: #ffffff; /* White color for headings */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
+    margin-bottom: 15px;
+}
+
+/* Adjust paragraph margins for better button spacing if needed */
+p {
+    margin: 0; /* Remove default paragraph margin */
 }
