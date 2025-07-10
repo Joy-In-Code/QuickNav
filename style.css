@@ -39,7 +39,7 @@ h1 {
 h2 {
     font-family: 'Poppins', sans-serif; /* Consistent with body or choose another */
     font-size: 2em; /* Adjust size for subheadings */
-    color: #ffffff; /* Use white color for consistency with H1 */
+    color: #f0eaea; /* Use white color for consistency with H1 */
     text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), /* Stronger, darker text-shadow for better contrast and depth */
                  0 0 15px rgba(255, 255, 255, 0.3); /* Subtle white glow for modern touch */
     margin-top: 40px; /* Space above secondary headings */
@@ -53,7 +53,7 @@ h2 {
     padding: 12px 25px; /* Slightly more padding for a better button feel */
     margin: 10px 0; /* Space between buttons (top/bottom) */
     text-decoration: none; /* Removes underline from links */
-    color: #ffffff; /* White text color for readability against dark background */
+    color: #d6cece; /* White text color for readability against dark background */
     font-size: 1.2em; /* Slightly larger text */
     font-weight: bold; /* Make text bold */
     text-align: center; /* Center the text */
