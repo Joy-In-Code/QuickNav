@@ -1,12 +1,12 @@
 body {
-    background-image: url('website_background.jpg');
+    background-image: url('website_background.jpg'); /* Ensure this image is in the same folder as style.css */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-color: #f0f0f0; /* Fallback color */
     color: #333; /* Default text color, will override for buttons */
-    font-family: Arial, sans-serif; /* A more modern font for readability */
+    font-family: 'Poppins', sans-serif; /* CORRECTED: Apply Poppins as default body font */
 
     /* To center content */
     display: flex;
@@ -16,9 +16,10 @@ body {
     min-height: 100vh; /* Ensures body takes full viewport height */
     padding-top: 50px; /* Add some top padding */
 }
-/* New Styles for H1 */
+
+/* Corrected and Consolidated Styles for H1 */
 h1 {
-    font-family: 'Montserrat', sans-serif; /* Or 'Poppins', sans-serif; */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat for H1 */
     font-size: 3.5em; /* Adjusted size: larger and more prominent */
     color: #ffffff; /* White color for contrast */
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), /* Subtle glow */
@@ -34,12 +35,13 @@ h1 {
     border-radius: 8px;
 }
 
-/* Styles for H2 */
+/* Corrected and Consolidated Styles for H2 */
 h2 {
     font-family: 'Poppins', sans-serif; /* Consistent with body or choose another */
     font-size: 2em; /* Adjust size for subheadings */
-    color: #e0e0e0; /* Slightly off-white for hierarchy */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Clearer shadow for readability */
+    color: #ffffff; /* Use white color for consistency with H1 */
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.8), /* Stronger, darker text-shadow for better contrast and depth */
+                 0 0 15px rgba(255, 255, 255, 0.3); /* Subtle white glow for modern touch */
     margin-top: 40px; /* Space above secondary headings */
     margin-bottom: 20px;
     letter-spacing: 1px;
@@ -57,10 +59,8 @@ h2 {
     text-align: center; /* Center the text */
     cursor: pointer; /* Indicates it's clickable */
 
-    /* Glassmorphism properties - MAIN CHANGE IS HERE */
-    background-color: rgba(0, 0, 0, 0.4); /* CHANGED: Darker, less transparent background */
-    /* Previous was rgba(255, 255, 255, 0.1) - now using a dark semi-transparent color */
-
+    /* Glassmorphism properties */
+    background-color: rgba(0, 0, 0, 0.4); /* Darker, less transparent background */
     backdrop-filter: blur(8px); /* INCREASED BLUR */
     -webkit-backdrop-filter: blur(8px); /* For Safari support */
     border-radius: 12px; /* Slightly more rounded corners */
@@ -70,26 +70,17 @@ h2 {
         0 4px 8px rgba(0, 0, 0, 0.4), /* Outer shadow for more depth, slightly darker */
         inset 0 0 0 1px rgba(255, 255, 255, 0.05), /* Very subtle light inner border */
         inset 0 0 0 2px rgba(0, 0, 0, 0.2); /* DARKER INNER SHADOW FOR EDGES, increased opacity */
-    /* You can play with the last shadow's offset and blur for edge definition */
-
 
     transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .glass-button:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* CHANGED: Even darker on hover */
+    background-color: rgba(0, 0, 0, 0.5); /* Even darker on hover */
     box-shadow:
         0 6px 12px rgba(0, 0, 0, 0.5), /* More pronounced outer shadow on hover */
         inset 0 0 0 1px rgba(255, 255, 255, 0.08),
         inset 0 0 0 2px rgba(0, 0, 0, 0.3); /* Slightly darker inner shadow on hover */
     transform: translateY(-2px); /* Slight lift effect on hover */
-}
-
-/* Basic styling for your headings for better visibility */
-h1, h2 {
-    color: #ffffff; /* White color for headings */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow for readability */
-    margin-bottom: 15px;
 }
 
 /* Adjust paragraph margins for better button spacing if needed */
